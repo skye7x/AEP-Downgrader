@@ -1,69 +1,62 @@
-# Prerequisites
-*.d
+# =========================================
+# .NET / Visual Studio / WPF
+# =========================================
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+publish/
+*.pdb
 *.ilk
 
-# Debugger Files
-*.pdb
+# Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
+# JetBrains Rider
+.idea/
+*.sln.iml
 
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
-# Fortran module files
-*.mod
-*.smod
+# Rider/VS Code
+.vscode/
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Test / coverage results
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
 
-# Executables
-*.exe
-*.out
-*.app
+# ClickOnce / publish profiles
+*.publishsettings
+PublishProfiles/
 
-# Build directories
-build/
-Build/
-build-*/
+# Windows / OS junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
+# Logs produced by the app's Debug Mode / exported reports
 *.log
+debug_report_*.log
+debug_report_*.txt
+
+# Editor backups
 *.bak
 *.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/

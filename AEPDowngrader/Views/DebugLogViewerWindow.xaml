@@ -1,0 +1,50 @@
+<Window x:Class="AEPDowngrader.Views.DebugLogViewerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Debug Log Viewer"
+        Width="800" Height="600"
+        WindowStartupLocation="CenterOwner"
+        Background="{StaticResource BackgroundBrush}">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Row="0" Background="{StaticResource BackgroundBrush}">
+            <TabItem Header="Log">
+                <TextBox x:Name="LogTextBox" Style="{StaticResource ConsoleLogStyle}"
+                         IsReadOnly="True" TextWrapping="NoWrap"
+                         VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                         AcceptsReturn="True"/>
+            </TabItem>
+            <TabItem Header="System Info">
+                <TextBox x:Name="SystemInfoTextBox" Style="{StaticResource ConsoleLogStyle}"
+                         IsReadOnly="True" TextWrapping="NoWrap"
+                         VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                         AcceptsReturn="True"/>
+            </TabItem>
+            <TabItem Header="File Operations">
+                <TextBox x:Name="FileOpsTextBox" Style="{StaticResource ConsoleLogStyle}"
+                         IsReadOnly="True" TextWrapping="NoWrap"
+                         VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                         AcceptsReturn="True"/>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource CompactButtonStyle}">
+                    <Setter Property="MinHeight" Value="32"/>
+                    <Setter Property="MaxHeight" Value="32"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="Copy to Clipboard" Style="{StaticResource CompactButtonStyle}" Margin="0,0,8,0" Padding="12,6" Click="CopyToClipboard_Click"/>
+            <Button Content="Export Full Report" Style="{StaticResource CompactButtonStyle}" Margin="0,0,8,0" Padding="12,6" Click="ExportLogs_Click"/>
+            <Button Content="Clear Logs" Style="{StaticResource CompactButtonStyle}" Margin="0,0,8,0" Padding="12,6" Click="ClearLogs_Click"/>
+            <Button Content="Refresh" Style="{StaticResource CompactButtonStyle}" Margin="0,0,8,0" Padding="12,6" Click="Refresh_Click"/>
+            <Grid Width="1"/>
+            <Button Content="Close" Style="{StaticResource PrimaryButtonStyle}" Padding="16,6" Click="Close_Click" HorizontalAlignment="Right"/>
+        </StackPanel>
+    </Grid>
+</Window>
