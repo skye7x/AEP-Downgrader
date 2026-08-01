@@ -1,0 +1,40 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b2b2b"/>
+      <stop offset="55%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rounded square background -->
+  <rect x="0" y="0" width="1024" height="1024" rx="224" ry="224" fill="url(#bg)"/>
+
+  <!-- declining chart line, monoline style matching icon 1 -->
+  <path d="M 232 268
+           L 400 452
+           L 560 330
+           L 792 560"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="42"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- arrowhead -->
+  <path d="M 700 560 L 792 560 L 792 468"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="42"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- .aep text -->
+  <text x="512" y="770"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="800"
+        font-size="210"
+        fill="#ffffff"
+        text-anchor="middle"
+        letter-spacing="-4">.aep</text>
+</svg>

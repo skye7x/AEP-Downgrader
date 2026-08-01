@@ -28,14 +28,6 @@ uses.
   system-information snapshot, for troubleshooting failed conversions
 - **Update checks** against GitHub releases, with "skip this version" support
 
-## Screenshots
-
-The app uses a dark theme with a custom title bar, a two-panel layout
-(quick actions on the left, conversion workspace on the right), and an
-activity log with a live progress bar.
-
-## Getting started
-
 ### Requirements
 
 - Windows 10 or later
@@ -62,40 +54,6 @@ dotnet publish AEPDowngrader/AEPDowngrader.csproj -c Release -r win-x64 --self-c
 
 The output `.exe` will be under
 `AEPDowngrader/bin/Release/net8.0-windows/win-x64/publish/`.
-
-## Usage
-
-1. Click **Select Files...** (or drag `.aep` files onto the drop zone).
-2. The app detects each file's source AE version and shows the versions
-   found.
-3. Choose a **Target Version** from the dropdown — only versions older than
-   the oldest detected file are offered. Versions flagged **EXPERIMENTAL**
-   aren't guaranteed to be compatible.
-4. Click **Convert**. Progress and per-file results appear in the activity
-   log; converted files are saved next to their originals.
-5. Use **Open Output Folder** to jump straight to the converted files.
-
-If you run into a conversion that doesn't work as expected, enable
-**Debug → Enable Debug Mode**, reproduce the issue, then use
-**Debug → View Debug Logs** or **Export Debug Report** when filing an issue.
-
-## Project layout
-
-```
-AEPDowngrader/
-├─ App.xaml(.cs)                 Application entry point, version constants
-├─ MainWindow.xaml(.cs)           Main window UI and workflow orchestration
-├─ Controls/InputDropZone.xaml    Drag-and-drop file picker control
-├─ Converters/                    XAML value converters
-├─ Models/TargetVersionOption.cs  Target-version combo box item
-├─ Services/
-│  ├─ AepConverter.cs             Core .aep header detection/patching logic
-│  ├─ AppSettings.cs              Persisted user settings (last folders, etc.)
-│  ├─ DebugLogger.cs              Debug logging, system/memory info
-│  └─ UpdateChecker.cs            GitHub releases update check
-├─ Themes/DarkTheme.xaml          App-wide dark theme (colors, control styles)
-└─ Views/                         Debug log viewer & update-available dialogs
-```
 
 ## Disclaimer
 
